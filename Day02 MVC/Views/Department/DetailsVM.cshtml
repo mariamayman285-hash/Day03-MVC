@@ -1,0 +1,20 @@
+﻿@model DeptExtraInfoViewModel
+<h2>@Model.DeptName</h2>
+
+
+
+@* the drop down list of students >25 years  *@
+
+<select  class="form form-control">
+
+	@foreach(Student student in Model.StudentsInDeptByAge)
+    {
+	<option>@student.Name</option>
+    }
+</select>
+
+
+
+@* Department state (if students>50 -> main , else->branch) *@
+
+<h2>@Model.DeptState</h2>

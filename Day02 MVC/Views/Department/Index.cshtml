@@ -1,0 +1,29 @@
+﻿@model List<Department>
+
+<h1>All Departments</h1>
+
+@* the new button to go to the add view *@
+<a href="/Department/Add" class="btn btn-success mb-3 mt-3">
+	New
+</a>
+
+<table class = "table table-hover table-bordered">
+	<tr>
+		<th>Id</th>
+	    <th>Name</th>
+	    <th>Manager Name</th>
+	</tr>
+
+@foreach(var i in Model)
+{
+	<tr>
+		<td>@i.Id</td>
+	    <td>@i.Name</td>
+	    <td>@i.MgrName</td>
+	</tr>
+}
+
+</table>
+
+
+

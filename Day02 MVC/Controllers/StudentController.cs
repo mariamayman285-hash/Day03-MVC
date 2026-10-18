@@ -18,5 +18,6 @@ namespace Day02_MVC.Controllers
             Student student = studentBL.GetById(id);
             return View("ShowDetails",student);
         }
+
     }
 }
